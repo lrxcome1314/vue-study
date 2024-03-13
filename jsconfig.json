@@ -2,11 +2,19 @@
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
-    "baseUrl": "./",
-    "moduleResolution": "node",
+    "baseUrl": ".",
+    "moduleResolution": "nodenext",
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "alwaysStrict": false,
+    "jsx": "preserve",
+    "types": [
+      "webpack-env",
+      "node"
+    ],
     "paths": {
       "@/*": [
-        "src/*"
+        "src/*",
       ]
     },
     "lib": [
@@ -15,5 +23,24 @@
       "dom.iterable",
       "scripthost"
     ]
-  }
+  },
+  "files": [
+    "auto-imports.d.ts",
+    "components.d.ts",
+    "core.ts",
+    "sys.ts",
+    "types.ts"
+  ],
+  "include": [
+    "src/**/*",
+    "src/*.ts", // 包括src目录下的所有.d.ts文件
+    "src/*.d.ts", // 包括src目录下的所有.d.ts文件
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "auto-imports.d.ts",
+    "components.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

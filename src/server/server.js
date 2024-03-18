@@ -53,6 +53,7 @@ const connection = mysql.createConnection({
   password: 'root', // 密码（若有）
   database: 'demo', // 要连接的数据库名称
 })
+$dbConfig.mysql
 connection.connect((err) => {
   if (err) throw err
   console.log('Connected to the MySQL server!')
